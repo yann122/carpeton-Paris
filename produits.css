@@ -1,0 +1,191 @@
+/* Style général */
+body {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    color: #2c2c2c;
+}
+
+/* Header */
+header {
+    background-color: #0d0d0d;
+    color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.principale {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #d4af37;
+    font-family: 'Playfair Display', serif;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 15px;
+    font-size: 1em;
+    letter-spacing: 0.5px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+ul li a:hover {
+    color: #d4af37;
+    border-color: #d4af37;
+    border-radius: 5px;
+}
+
+/* Section Produit */
+.produit {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.produit-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.produit-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.produit-info {
+    max-width: 500px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.produit-info h1 {
+    font-size: 2.5em;
+    color: #2c2c2c;
+    margin-bottom: 20px;
+}
+
+.produit-info .prix {
+    font-size: 1.8em;
+    color: #d4af37;
+    margin-bottom: 20px;
+}
+
+.produit-info .description {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.ajouter-panier {
+    background-color: #d4af37;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.ajouter-panier:hover {
+    background-color: #f0c674;
+}
+
+/* Produits Similaires */
+.autres-produits {
+    text-align: center;
+}
+
+.autres-produits h2 {
+    font-size: 2em;
+    color: #2c2c2c;
+    margin-bottom: 30px;
+}
+
+.produits-similaires {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.produit-similaire {
+    text-align: center;
+    width: 30%;
+}
+
+.produit-similaire img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.produit-similaire p {
+    font-size: 1.1em;
+    margin-top: 10px;
+    color: #333;
+}
+
+/* Nouveau bouton "Ajouter au panier" pour les produits similaires */
+.ajouter-panier-similaire {
+    background-color: #d4af37;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.ajouter-panier-similaire:hover {
+    background-color: #f0c674;
+}
+
+/* Ajouter un bouton pour ajouter tous les produits au panier */
+.ajouter-panier-tous {
+    margin-top: 40px;
+}
+
+.ajouter-panier-tous button {
+    background-color: #d4af37;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.3em;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.ajouter-panier-tous button:hover {
+    background-color: #f0c674;
+}

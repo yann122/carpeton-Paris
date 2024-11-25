@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panier - Vente de Tapis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="tapismoderne.css">
+</head>
+<body>
+    <header>
+        <div class="principale">
+            <div class="logo">
+                <a href="index.html">carpet <span>on</span></a>
+            </div>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="catalogue.html">Catalogue</a></li>
+                
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="panier.html">Panier</a></li> <!-- Lien vers la page du panier -->
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="produit">
+            <div class="produit-details">
+                <div class="produit-image">
+                    <img src="image/tapis1.png" alt="Tapis Moderne">
+                </div>
+                <div class="produit-info">
+                    <h1>Tapis Moderne</h1>
+                    <p class="prix">€299,99</p>
+                    <p class="description">
+                        Ce tapis moderne est conçu pour apporter une touche d'élégance à votre salon. Fabriqué à partir de matériaux de haute qualité, il offre à la fois confort et durabilité.
+                    </p>
+                    <button class="ajouter-panier" onclick="ajouterAuPanier()">Ajouter au panier</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Panier -->
+        <section id="panier" class="panier">
+            <h2>Votre Panier</h2>
+            <ul id="panier-liste">
+                <!-- Les articles ajoutés au panier apparaîtront ici -->
+            </ul>
+            <div class="total">
+                <p>Total : <span id="total">€299.99</span></p>
+            </div>
+            <button class="commander">Commander</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Vente de Tapis. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        // Simuler l'ajout au panier avec JavaScript
+        let panier = [];
+        let total = 0;
+
+        function ajouterAuPanier() {
+            // Détails du produit
+            const produit = {
+                nom: "Tapis Moderne",
+                prix: 299.99
+            };
+
+            // Ajouter le produit au panier
+            panier.push(produit);
+            total += produit.prix;
+
+            // Mettre à jour l'affichage du panier
+            afficherPanier();
+        }
+
+        function afficherPanier() {
+            // Obtenir l'élément du panier et la liste des articles
+            const panierListe = document.getElementById('panier-liste');
+            const totalElement = document.getElementById('total');
+
+            // Vider la liste actuelle
+            panierListe.innerHTML = '';
+
+            // Ajouter chaque produit dans la liste
+            panier.forEach((produit, index) => {
+                const li = document.createElement('li');
+                li.textContent = produit.nom + " - €" + produit.prix.toFixed(2);
+                panierListe.appendChild(li);
+            });
+
+            // Mettre à jour le total
+            totalElement.textContent = "€" + total.toFixed(2);
+        }
+    </script>
+</body>
+</html>
